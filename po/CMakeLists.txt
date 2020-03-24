@@ -1,0 +1,3 @@
+find_package(Gettext REQUIRED)
+file(GLOB pofiles RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.po)
+GETTEXT_CREATE_TRANSLATIONS(${GETTEXT_PACKAGE}.pot ALL ${pofiles})
