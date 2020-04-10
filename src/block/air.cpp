@@ -21,7 +21,7 @@
 #include "block/air.h"
 
 namespace Cenisys{
-	
+
 	namespace Block{
 		
 		Air::Air(){
