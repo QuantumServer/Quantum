@@ -23,23 +23,27 @@
 #include <memory>
 
 namespace Cenisys {
-	namespace Block {
-		class Block {
-			public:
-				Block();
-				virtual ~Block();
-				virtual std::shared_ptr<Block> clone() = 0;
-				virtual bool equals(const Block &other);
-		};
-		
-		// CRTP
-		template <typename T>
-		class BlockBase : virtual public Block {
-			std::shared_ptr<Block> clone() {
-				return std::make_shared<T>(*static_cast<T *>(this));
-			}
-		};
+
+    namespace Block {
+
+        class Block {
+            public:
+                Block();
+                virtual ~Block();
+                virtual std::shared_ptr<Block> clone() = 0;
+                virtual bool equals(const Block &other);
+        };
+
+        // CRTP
+        template <typename T>
+        class BlockBase : virtual public Block {
+            std::shared_ptr<Block> clone() {
+                return std::make_shared<T>(*static_cast<T *>(this));
+            }
+        };
+
 	} // namespace Block
+
 } // namespace Cenisys
 
 #endif // CENISYS_BLOCK_BLOCK_H

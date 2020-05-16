@@ -20,12 +20,14 @@
  
 #include "block/air.h"
 
-namespace Cenisys{
+namespace Cenisys {
 
-	namespace Block{
-		
-		Air::Air(){
-			
-		}
-	} // namespace Block
+    namespace Block {
+
+        Air::Air() {
+
+        }
+
+    } // namespace Block
+
 } // namespace Cenisys

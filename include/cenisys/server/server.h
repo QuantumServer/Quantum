@@ -24,15 +24,17 @@
 #include "config/configparser.h"
 
 namespace Cenisys {
+
 	class Server {
-		public:
-			struct Config;
-			Server(Config &config);
-			
-		private:
-			std::reference_wrapper<Config> config_;
-	};
-	
+
+        public:
+            struct Config;
+            Server(Config &config);
+
+        private:
+            std::reference_wrapper<Config> config_;
+    };
+
 } // namespace Cenisys
 
 CENISYS_DEFINE_CONFIG_PARSER((Cenisys), Server::Config, (int, max_players, 64))

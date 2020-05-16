@@ -20,7 +20,9 @@
 #include "server/server.h"
 
 namespace Cenisys {
-	Server::Server(Server::Config &config) : config_(config) {
-		
+
+    Server::Server(Server::Config &config) : config_(config) {
+
 	}
+
 } // namespace Cenisys

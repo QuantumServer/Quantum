@@ -24,23 +24,25 @@
 CENISYS_DEFINE_CONFIG_PARSER((ConfigTest), Section, (std::string, string))
 using SectionTable = std::unordered_map<std::string, ConfigTest::Section>;
 using NumberArray = std::vector<double>;
-CENISYS_DEFINE_CONFIG_PARSER((ConfigTest), Main, (int, defaultValue, 0xdead), (int, defaultZero), (NumberArray, floats), (int, integer), (SectionTable, sections))
+CENISYS_DEFINE_CONFIG_PARSER(
+    (ConfigTest),
+    Main,
+    (int, defaultValue, 0xdead),
+    (int, defaultZero),
+    (NumberArray, floats),
+    (int, integer),
+    (SectionTable, sections)
+)
 
 BOOST_AUTO_TEST_SUITE(config)
 
 BOOST_AUTO_TEST_CASE(parse) {
-	std::stringstream ifs("integer = 4\n", "floats = [1.0,2.3,5.5]\n", "[sections.a]\n", "string = \"str\"\n", "");
-	toml::ParseResult pr = toml::parse(ifs);
-	if(!pr.valid()) {
-		throw std::runtime_error(pr.errorReason);
-	}
-	const toml::Value &v = pr.value;
-	
-	
-	
-	
-	
-	
+    std::stringstream ifs("integer = 4\n", "floats = [1.0,2.3,5.5]\n", "[sections.a]\n", "string = \"str\"\n", "");
+    toml::ParseResult pr = toml::parse(ifs);
+    if (!pr.valid()) {
+        throw std::runtime_error(pr.errorReason);
+    }
+    const toml::Value &v = pr.value;
     const toml::Value &v = pr.value;
     ConfigTest::Main conf;
     Cenisys::ConfigParser<ConfigTest::Main>()(v, conf);

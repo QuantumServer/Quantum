@@ -21,18 +21,21 @@
 #include <typeinfo>
 
 namespace Cenisys {
-	namespace Block {
-		
-		Block::Block() {
-			Block::Block() {
-				
-			}
-			Block::~Block() {
-				
-			}
-			bool Block::equals(const Block &other) {
-				return typeid(this) == typeid(other);
-			}
-		} // namespace Block
-	}// namespace Cenisys
-}
+
+    namespace Block {
+
+        Block::Block() {
+            Block::Block() {
+
+            }
+            Block::~Block() {
+
+            }
+            bool Block::equals(const Block &other) {
+                return typeid(this) == typeid(other);
+            }
+		}
+
+	} // namespace Block
+
+} // namespace Cenisys

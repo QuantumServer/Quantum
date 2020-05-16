@@ -25,34 +25,38 @@
 #include "world/chunk.h"
 
 namespace Cenisys {
-	class Chunk;
-	namespace Block {
-		class BlockRef {
-			public:
-				~BlockRef();
-				BlockRef(const BlockRef &) = delete;
-				BlockRef(BlockRef &&) = default;
-				const Block &block() const {
-					return modified_ ? *modified_ : *original_;
-				}
-				Block &block() {
-					return modified_ ? *modified_ : *(modified_ = original_->clone());
-				}
-				
-			private:
-				friend class ::Cenisys::Chunk;
-				BlockRef(std::shared_ptr<Chunk> chunk, Chunk::BlockPos pos);
-				
-				bool commit();
-				bool commitUnlocked();
-				
-				std::shared_ptr<Chunk> chunk_;
-				Chunk::BlockPos pos_;
-				
-				std::shared_ptr<Block> original_;
-				std::shared_ptr<Block> modified_;
+
+    class Chunk;
+    namespace Block {
+
+        class BlockRef {
+            public:
+                ~BlockRef();
+                BlockRef(const BlockRef &) = delete;
+                BlockRef(BlockRef &&) = default;
+                const Block &block() const {
+                    return modified_ ? *modified_ : *original_;
+                }
+                Block &block() {
+                    return modified_ ? *modified_ : *(modified_ = original_->clone());
+                }
+
+            private:
+                friend class ::Cenisys::Chunk;
+                BlockRef(std::shared_ptr<Chunk> chunk, Chunk::BlockPos pos);
+
+                bool commit();
+                bool commitUnlocked();
+
+                std::shared_ptr<Chunk> chunk_;
+                Chunk::BlockPos pos_;
+
+                std::shared_ptr<Block> original_;
+                std::shared_ptr<Block> modified_;
 		};
+
 	} // namespace Block
+
 } // namespace Cenisys
 
 #endif // CENISYS_BLOCK_BLOCKREF_H
