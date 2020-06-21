@@ -22,17 +22,15 @@
 
 #include "block/block.h"
 
-namespace Cenisys {
-
-    namespace Block {
+namespace quantum {
+    namespace block {
 
         class Air : public BlockBase<Air> {
             public:
                 Air();
         };
 
-	} // namespace Block
+	}
+}
 
-} // namespace Cenisys
-
-#endif // CENISYS_BLOCK_AIR_H
+#endif
