@@ -11,7 +11,17 @@
 #include <boost/locale/generator.hpp>
 #include <boost/locale/message.hpp>
 #include <boost/program_options.hpp>
+#include <stdio.h>
+#include <thread>
+
 #include "server/ServerManager.h"
+#include "Server.h"
+
+void start() {
+
+    Server::initialize();
+
+}
 
 int main(int argc, char *argv[]) {
 
@@ -37,6 +47,9 @@ int main(int argc, char *argv[]) {
             boost::locale::translate("set the configuration file").str().c_str()
     );
 
+    printf("Starting Quantum...\n");
+    std::thread server(start);
+    server.join();
     boost::program_options::variables_map vm;
 
     boost::program_options::store(
