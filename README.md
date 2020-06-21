@@ -4,6 +4,12 @@
 ## Introduction
 Quantum is a fast, clean server software forked from [Cenisys](https://github.com/iTXTech/Cenisys).
 
+## TODO list
+- [ ] Rewrite CppRakLib
+- [ ] MOTD
+- [ ] Commands
+- [ ] Protocol
+
 ```
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
