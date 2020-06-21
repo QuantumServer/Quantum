@@ -1,8 +1,8 @@
-#include "world/chunk.h"
+#include "world/Chunk.h"
 #include <boost/assert.hpp>
-#include "block/air.h"
-#include "block/block.h"
-#include "block/blockref.h"
+#include "block/Air.h"
+#include "block/Block.h"
+#include "block/BlockRef.h"
 
 namespace quantum {
 

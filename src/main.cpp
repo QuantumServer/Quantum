@@ -1,4 +1,4 @@
-#include "config.h"
+#include "Config.h"
 
 #include <iostream>
 #include <locale>
@@ -11,7 +11,7 @@
 #include <boost/locale/generator.hpp>
 #include <boost/locale/message.hpp>
 #include <boost/program_options.hpp>
-#include "server/servermanager.h"
+#include "server/ServerManager.h"
 
 int main(int argc, char *argv[]) {
 
