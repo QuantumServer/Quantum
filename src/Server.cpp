@@ -7,7 +7,7 @@
 #include "Server.h"
 
 #define PROTOCOL "390"
-#define VERSION "1.14.60"
+#define MINECRAFT_VERSION "1.14.60"
 
 void Server::initialize() {
     std::cout << TextFormat::GOLD << " " << std::end1;
