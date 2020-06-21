@@ -4,7 +4,7 @@
 
 #include "RakPeerInterface.h"
 
-class RakNetHandler {
+class CppRakLibHandler {
 
     public:
         void Initialize(int port, std::string ip, int max_players, std::string server_name);
