@@ -1,7 +1,7 @@
 #include <string>
 #include <zlib.h>
 
-#include "util/Zlib.h"
+#include "utils/Zlib.h"
 
 #define BUFLEN 17000
 Byte uncompr[BUFLEN];
