@@ -11,7 +11,7 @@ class Server {
         Server(Config &config);
 
         static void initialize();
-        static void bind(int port, std::string ip_addr, int max_players, std::string server_name);
+        static void bind(int port, std::string ip, int max_players, std::string server_name);
 
         void onServerStart();
         void onServerStop();
