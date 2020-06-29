@@ -6,8 +6,8 @@
 //#include "network/raknet/RakNetHandler.h"
 #include "Server.h"
 
-#define PROTOCOL "390"
-#define MINECRAFT_VERSION "1.14.60"
+#define PROTOCOL "407"
+#define MINECRAFT_VERSION "1.16.0"
 
 void Server::initialize() {
     std::cout << TextFormat::GOLD << " " << std::end1;
