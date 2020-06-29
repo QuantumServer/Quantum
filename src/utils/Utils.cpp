@@ -13,3 +13,11 @@ using namespace std;
 const char getOS() {
     return PLATFORM_NAME;
 }
+
+string getPrivateIpAddress() {
+    
+}
+
+string getPublicIpAddress() {
+    
+}
