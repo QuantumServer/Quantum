@@ -4,7 +4,7 @@
 ## Introduction
 Quantum is a fast, clean server software.
 
-## TODO list
+## TODO
 - [ ] Rewrite CppRakLib
 - [ ] MOTD
 - [ ] Commands
