@@ -19,8 +19,8 @@ void Server::initialize() {
 
 void Server::bind(int port, std::string ip, int max_players, std::string server_name) {
     std::chrono::high_resolution_clock::time_point start_time = std::chrono::high_resolution_clock::now();
-    RakNetHandler* handler;
-    handler->initialize(port, ip, max_players, server_name);
+    //RakNetHandler* handler;
+    //handler->initialize(port, ip, max_players, server_name);
     std::chrono::high_resolution_clock::time_point end_time = std::chrono::high_resolution_clock::now();
     long exec_time = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count();
     printf("Server Invoked, Took %ldms\n", exec_time);
