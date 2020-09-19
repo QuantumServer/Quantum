@@ -6,8 +6,8 @@ class Info {
 
     public:
         static const int CURRENT_PROTOCOL;
-        static const char MINECRAFT_VERSION;
-        static const char MINECRAFT_VERSION_NETWORK;
+        static const std::string MINECRAFT_VERSION;
+        static const std::string MINECRAFT_VERSION_NETWORK;
 
         static const int LOGIN_PACKET;
         static const int PLAY_STATUS_PACKET;

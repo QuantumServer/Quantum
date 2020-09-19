@@ -5,10 +5,8 @@
 #include "RakNetTypes.h"
 #include "BitStream.h"
 
+#include "network/protocol/Info.h"
 #include "network/RakNetHandler.h"
-
-#define PROTOCOL "390"
-#define MINECRAFT_VERSION "1.14.60"
 
 void RakNetHandler::initialize(int port, std::string ip, int max_players, std::string server_name) {
     RakNet::RakPeerInterface *peer = RakNet::RakPeerInterface::getInstance();
@@ -16,8 +14,9 @@ void RakNetHandler::initialize(int port, std::string ip, int max_players, std::s
 
     if (peer->Startup(max_players, &socket_desc, 1) == RakNet::CPPRAKLIB_STARTED) {
         peer->SetMaximumIncomingConnections(max_players);
+
         std::ostringstream motd;
-        motd << "MCPE;" << server_name << ";" << PROTOCOL << ";" << MINECRAFT_VERSION << ";0;" << max_players;
+        motd << "MCPE;" << server_name << ";" << Info::CURRENT_PROTOCOL << ";" << Info::MINECRAFT_VERSION << ";0;" << max_players;
         std::string message = motd.str();
 
         message.insert(message.begin(), message.size());
