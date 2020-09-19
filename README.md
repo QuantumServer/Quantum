@@ -1,11 +1,10 @@
 # Quantum
-[![License](https://img.shields.io/badge/license-GNU%20v3-blue.svg?style=flat-square)](https://github.com/QuantumServer/Quantum/blob/master/LICENSE)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/QuantumServer/Quantum#Quantum) [![License](https://img.shields.io/badge/license-Apache-blue)](https://github.com/QuantumServer/Quantum/blob/master/LICENSE)
 
 ## Introduction
 Quantum is a fast, clean server software.
 
-## TODO list
-- [ ] Rewrite CppRakLib
+## TODO
 - [ ] MOTD
 - [ ] Commands
 - [ ] Protocol

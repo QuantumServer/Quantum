@@ -16,7 +16,7 @@ namespace quantum {
             bool Block::equals(const Block &other) {
                 return typeid(this) == typeid(other);
             }
-		}
+        }
 
-	}
+    }
 }
