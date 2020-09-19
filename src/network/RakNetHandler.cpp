@@ -5,16 +5,16 @@
 #include "RakNetTypes.h"
 #include "BitStream.h"
 
-#include "network/CppRakLibHandler.h"
+#include "network/RakNetHandler.h"
 
 #define PROTOCOL "390"
 #define MINECRAFT_VERSION "1.14.60"
 
-void CppRakLibHandler::initialize(int port, std::string ip, int max_players, std::string server_name) {
-    CppRakLib::RakPeerInterface *peer = CppRakLib::RakPeerInterface::getInstance();
-    CppRakLib::SocketDescriptor socket_desc(port, ip.c_str());
+void RakNetHandler::initialize(int port, std::string ip, int max_players, std::string server_name) {
+    RakNet::RakPeerInterface *peer = RakNet::RakPeerInterface::getInstance();
+    RakNet::SocketDescriptor socket_desc(port, ip.c_str());
 
-    if (peer->Startup(max_players, &socket_desc, 1) == CppRakLib::CPPRAKLIB_STARTED) {
+    if (peer->Startup(max_players, &socket_desc, 1) == RakNet::CPPRAKLIB_STARTED) {
         peer->SetMaximumIncomingConnections(max_players);
         std::ostringstream motd;
         motd << "MCPE;" << server_name << ";" << PROTOCOL << ";" << MINECRAFT_VERSION << ";0;" << max_players;
@@ -26,19 +26,19 @@ void CppRakLibHandler::initialize(int port, std::string ip, int max_players, std
         peer->SetOfflinePingResponse(message.c_str(), message.size());
 
         while (1) {
-            CppRakLibHandler::handle(peer);
+            RakNetHandler::handle(peer);
         }
     }
 }
 
-void CppRakLibHandler::handle(CppRakLib::RakPeerInterface *peer) {
-    CppRakLib::packet *packet;
+void RakNetHandler::handle(RakNet::RakPeerInterface *peer) {
+    RakNet::packet *packet;
     for (packet = peer->Receive(); packet; peer->DeallocatePacket(packet), packet = peer->Receive()) {
         switch (packet->data[0]) {
             printf("[%s]: %s", packet->data[0], packet->data);
             case 0xFE:
-                CppRakLib::BitStream stream(packet->data, packet->length, false);
-                stream.IgnoreBytes(sizeof(CppRakLib::MessageID));
+                RakNet::BitStream stream(packet->data, packet->length, false);
+                stream.IgnoreBytes(sizeof(RakNet::MessageID));
 
                 int length;
                 stream.Read(length);
