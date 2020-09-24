@@ -1,5 +1,5 @@
 # Quantum
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/QuantumServer/Quantum#Quantum) [![License](https://img.shields.io/badge/license-Apache-blue)](https://github.com/QuantumServer/Quantum/blob/master/LICENSE)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/QuantumServer/Quantum#Quantum) [![License](https://img.shields.io/badge/license-Apache-blue)](https://github.com/QuantumServer/Quantum/blob/master/LICENSE) [![HitCount](http://hits.dwyl.com/QuantumServer/Quantum.svg)](http://hits.dwyl.com/QuantumServer/Quantum)
 
 ## Introduction
 Quantum is a fast, clean server software.
