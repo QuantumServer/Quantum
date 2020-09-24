@@ -1,5 +1,5 @@
 #include <string>
-#include <zlib.h>
+#include <Zlib.h>
 
 #include "utils/Zlib.h"
 
