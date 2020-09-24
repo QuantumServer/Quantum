@@ -4,7 +4,7 @@
 [![HitCount](http://hits.dwyl.com/QuantumServer/https://githubcom/QuantumServer/Quantum.svg)](http://hits.dwyl.com/QuantumServer/https://githubcom/QuantumServer/Quantum)
 
 ## Introduction
-Quantum is a fast, clean server software.
+Quantum is a fast, clean server software written in C++.
 
 ## TODO
 - [ ] MOTD
