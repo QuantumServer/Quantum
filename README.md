@@ -10,7 +10,7 @@ Quantum is a fast, clean server software written in C++.
 - [ ] MOTD
 - [ ] Commands
 - [ ] Protocol
-- [ ] TextFormat
+- [X] TextFormat
 
 ```
 Copyright 2020 QuantumServer
