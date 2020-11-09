@@ -3,11 +3,12 @@
 // Minecraft: Bedrock Edition protocol version
 const int CURRENT_PROTOCOL = 408;
 
-// Minecraft: Bedrock Edition version. Usually the earliest currently supported version.
-const char* MINECRAFT_VERSION = "v1.16.20";
+// Minecraft: Bedrock Edition version.
+// this is usually the earliest currently supported version
+const std::string MINECRAFT_VERSION = "v1.16.20";
 
 // version number sent to clients in ping responses
-const char* MINECRAFT_VERSION_NETWORK = "v1.16.20";
+const std::string MINECRAFT_VERSION_NETWORK = "v1.16.20";
 
 const int LOGIN_PACKET = 0x01;
 const int PLAY_STATUS_PACKET = 0x02;

@@ -1,13 +1,16 @@
 # Quantum
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/QuantumServer/Quantum#Quantum) [![License](https://img.shields.io/badge/license-Apache-blue)](https://github.com/QuantumServer/Quantum/blob/master/LICENSE)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/QuantumServer/Quantum#Quantum)
+[![License](https://img.shields.io/badge/license-Apache-blue)](https://github.com/QuantumServer/Quantum/blob/master/LICENSE)
+[![HitCount](http://hits.dwyl.com/quantumserver/quantum.svg)](https://github.com/quantumserver/quantum)
 
 ## Introduction
-Quantum is a fast, clean server software.
+Quantum is a fast, clean server software written in C++.
 
 ## TODO
 - [ ] MOTD
 - [ ] Commands
 - [ ] Protocol
+- [X] TextFormat
 
 ```
 Copyright 2020 QuantumServer
