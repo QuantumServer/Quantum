@@ -44,7 +44,6 @@ class Info {
         static const int BLOCK_PICK_REQUEST_PACKET;
         static const int ACTOR_PICK_REQUEST_PACKET;
         static const int PLAYER_ACTION_PACKET;
-        static const int ACTOR_FALL_PACKET;
         static const int HURT_ARMOR_PACKET;
         static const int SET_ACTOR_DATA_PACKET;
         static const int SET_ACTOR_MOTION_PACKET;
@@ -139,7 +138,6 @@ class Info {
         static const int MAP_CREATE_LOCKED_COPY_PACKET;
         static const int STRUCTURE_TEMPLATE_DATA_REQUEST_PACKET;
         static const int STRUCTURE_TEMPLATE_DATA_RESPONSE_PACKET;
-        static const int UPDATE_BLOCK_PROPERTIES_PACKET;
         static const int CLIENT_CACHE_BLOB_STATUS_PACKET;
         static const int CLIENT_CACHE_MISS_RESPONSE_PACKET;
         static const int EDUCATION_SETTINGS_PACKET;
@@ -162,5 +160,11 @@ class Info {
         static const int POSITION_TRACKING_D_B_CLIENT_REQUEST_PACKET;
         static const int DEBUG_INFO_PACKET;
         static const int PACKET_VIOLATION_WARNING_PACKET;
+        static const int MOTION_PREDICTION_HINTS_PACKET;
+        static const int ANIMATE_ENTITY_PACKET;
+        static const int CAMERA_SHAKE_PACKET;
+        static const int PLAYER_FOG_PACKET;
+        static const int CORRECT_PLAYER_MOVE_PREDICTION_PACKET;
+        static const int ITEM_COMPONENT_PACKET;
 
 };
