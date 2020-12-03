@@ -1,14 +1,14 @@
 #include "network/protocol/Info.h"
 
 // Minecraft: Bedrock Edition protocol version
-const int CURRENT_PROTOCOL = 408;
+const int CURRENT_PROTOCOL = 419;
 
 // Minecraft: Bedrock Edition version.
 // this is usually the earliest currently supported version
-const std::string MINECRAFT_VERSION = "v1.16.20";
+const std::string MINECRAFT_VERSION = "v1.16.100";
 
 // version number sent to clients in ping responses
-const std::string MINECRAFT_VERSION_NETWORK = "v1.16.20";
+const std::string MINECRAFT_VERSION_NETWORK = "v1.16.100";
 
 const int LOGIN_PACKET = 0x01;
 const int PLAY_STATUS_PACKET = 0x02;
@@ -45,7 +45,6 @@ const int INTERACT_PACKET = 0x21;
 const int BLOCK_PICK_REQUEST_PACKET = 0x22;
 const int ACTOR_PICK_REQUEST_PACKET = 0x23;
 const int PLAYER_ACTION_PACKET = 0x24;
-const int ACTOR_FALL_PACKET = 0x25;
 const int HURT_ARMOR_PACKET = 0x26;
 const int SET_ACTOR_DATA_PACKET = 0x27;
 const int SET_ACTOR_MOTION_PACKET = 0x28;
@@ -140,7 +139,6 @@ const int ON_SCREEN_TEXTURE_ANIMATION_PACKET = 0x82;
 const int MAP_CREATE_LOCKED_COPY_PACKET = 0x83;
 const int STRUCTURE_TEMPLATE_DATA_REQUEST_PACKET = 0x84;
 const int STRUCTURE_TEMPLATE_DATA_RESPONSE_PACKET = 0x85;
-const int UPDATE_BLOCK_PROPERTIES_PACKET = 0x86;
 const int CLIENT_CACHE_BLOB_STATUS_PACKET = 0x87;
 const int CLIENT_CACHE_MISS_RESPONSE_PACKET = 0x88;
 const int EDUCATION_SETTINGS_PACKET = 0x89;
@@ -163,3 +161,9 @@ const int POSITION_TRACKING_D_B_SERVER_BROADCAST_PACKET = 0x99;
 const int POSITION_TRACKING_D_B_CLIENT_REQUEST_PACKET = 0x9a;
 const int DEBUG_INFO_PACKET = 0x9b;
 const int PACKET_VIOLATION_WARNING_PACKET = 0x9c;
+const int MOTION_PREDICTION_HINTS_PACKET = 0x9d;
+const int ANIMATE_ENTITY_PACKET = 0x9e;
+const int CAMERA_SHAKE_PACKET = 0x9f;
+const int PLAYER_FOG_PACKET = 0xa0;
+const int CORRECT_PLAYER_MOVE_PREDICTION_PACKET = 0xa1;
+const int ITEM_COMPONENT_PACKET = 0xa2;
