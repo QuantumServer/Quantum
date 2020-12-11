@@ -1,7 +1,7 @@
 # Quantum
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/QuantumServer/Quantum#Quantum)
 [![License](https://img.shields.io/badge/license-Apache-blue)](https://github.com/QuantumServer/Quantum/blob/master/LICENSE)
-[![HitCount](http://hits.dwyl.com/QuantumServer/Quantum.svg)](http://hits.dwyl.com/QuantumServer/Quantum)
+[![Views](https://api.ghprofile.me/view?username=QuantumServer.Quantum&color=51B780&label=Views&style=flat)](https://github.com/QuantumServer/Quantum)
 
 
 ## Introduction
