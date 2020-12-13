@@ -9,6 +9,9 @@ namespace quantum {
     Chunk::Chunk() : blocks_({{BlockPos{0, 0, 0}, std::make_shared<Block::Air>()}}) {
 
     }
+    /*Chunk::Chunk(World* world, int x, int y, Block blocks[]) : world({{world}, x{x}, y{y}, blocks{*blocks}}) {
+
+    }*/
 
     Chunk::~Chunk() {
 
