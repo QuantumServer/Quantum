@@ -18,10 +18,10 @@ namespace quantum {
                 unsigned char y : 8;
                 unsigned char x : 4;
                 unsigned char z : 4;
-                friend bool operator==(BlockPos lhs, BlockPos rhs) {
+                friend bool operator == (BlockPos lhs, BlockPos rhs) {
                     return lhs.x == rhs.x && lhs.y == rhs.y && lhs.z == rhs.z;
                 }
-                friend bool operator!=(BlockPos lhs, BlockPos rhs) {
+                friend bool operator != (BlockPos lhs, BlockPos rhs) {
                     return !(lhs == rhs);
                 }
                 friend bool operator<(BlockPos lhs, BlockPos rhs) {
