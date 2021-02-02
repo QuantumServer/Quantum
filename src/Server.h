@@ -2,7 +2,7 @@
 #define CENISYS_SERVER_H
 
 #include <utility>
-#include "config/configparser.h"
+#include "config/ConfigParser.h"
 
 class Server {
 
